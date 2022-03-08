@@ -13,10 +13,10 @@ class Search extends StatelessWidget {
     var search = ModalRoute.of(context).settings.arguments as String;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
         leading: IconButton(
           icon: Icon(CupertinoIcons.back),
           onPressed: () => Navigator.of(context).pop(),
@@ -25,8 +25,8 @@ class Search extends StatelessWidget {
         title: Text(
           '$search',
           style: TextStyle(
-            color: Color.fromRGBO(0, 0, 0, 1),
-            fontSize: 18,
+            color: Colors.white,
+            fontSize: 22,
           ),
         ),
       ),
@@ -91,6 +91,7 @@ class Search extends StatelessWidget {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 28,
+                                color: Colors.black,
                               ),
                             ),
                           ),

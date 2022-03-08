@@ -39,7 +39,7 @@ class ProductDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+        // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
         leading: IconButton(
           icon: Icon(CupertinoIcons.back),
           onPressed: () => Navigator.of(context).pop(),
@@ -61,7 +61,7 @@ class ProductDetail extends StatelessWidget {
           )
         ],
       ),
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         alignment: Alignment.center,
         margin: EdgeInsets.symmetric(
@@ -111,7 +111,7 @@ class ProductDetail extends StatelessWidget {
                     'N${meal.price}',
                     style: TextStyle(
                       fontSize: 22,
-                      color: Theme.of(context).primaryColor,
+                      color: Colors.white54,
                     ),
                   ),
                 ),
@@ -138,29 +138,6 @@ class ProductDetail extends StatelessWidget {
                     ),
                   ),
                 ),
-                // SizedBox(height: constraint.maxHeight * .03),
-                // Align(
-                //   alignment: Alignment.topLeft,
-                //   child: Text(
-                //     'Ingredients',
-                //     style: TextStyle(
-                //       fontSize: 17,
-                //       fontWeight: FontWeight.w600,
-                //     ),
-                //   ),
-                // ),
-                // SizedBox(height: constraint.maxHeight * .02),
-                // Align(
-                //   alignment: Alignment.topLeft,
-                //   child: Text(
-                //     '',
-                //     style: TextStyle(
-                //       fontSize: 15,
-                //       fontWeight: FontWeight.normal,
-                //       color: Colors.grey,
-                //     ),
-                //   ),
-                // ),
                 SizedBox(height: 100),
                 Container(
                   width: double.infinity,
@@ -197,10 +174,10 @@ class _AddToCartState extends State<AddToCart> {
     var cart = Provider.of<Cart>(context);
 
     return Consumer<Meals>(
-      builder: (ctx, meals, child) => RaisedButton(
+      builder: (ctx, meals, child) => MaterialButton(
         elevation: 0,
         padding: EdgeInsets.symmetric(vertical: widget.padding),
-        color: Theme.of(context).primaryColor,
+        color: Theme.of(context).accentColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),

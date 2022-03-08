@@ -30,12 +30,13 @@ class _AppHomeState extends State<AppHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 15),
         child: LayoutBuilder(
           builder: (ctx, constraint) => ListView(
             children: [
+              SizedBox(height: 10),
               Text(
                 'Great food\nfrom our grill',
                 // 'BBQ is\nLifestyle',
@@ -114,7 +115,7 @@ class _AppHomeState extends State<AppHome> {
                               bottom: BorderSide(
                                 width: 2,
                                 color: _current == i
-                                    ? Theme.of(context).primaryColor
+                                    ? Theme.of(context).accentColor
                                     : Colors.transparent,
                               ),
                             ),
@@ -125,7 +126,7 @@ class _AppHomeState extends State<AppHome> {
                               style: TextStyle(
                                 fontSize: 17,
                                 color: _current == i
-                                    ? Theme.of(context).primaryColor
+                                    ? Theme.of(context).accentColor
                                     : Colors.grey,
                               ),
                             ),
@@ -176,7 +177,7 @@ class _AppHomeState extends State<AppHome> {
                       );
                     } else {
                       if (snapshot.hasError) {
-                        return FlatButton(
+                        return TextButton(
                           onPressed: () {
                             Navigator.of(context)
                                 .pushReplacementNamed(WaitScreen.route);

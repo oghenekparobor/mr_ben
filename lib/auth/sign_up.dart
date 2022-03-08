@@ -41,7 +41,7 @@ class _SignUpState extends State<SignUp> {
               'Credential already exist, please try again with another email',
             ),
             actions: [
-              FlatButton(
+              TextButton(
                   onPressed: () async {
                     Navigator.of(context).pop();
                     _formKey.currentState.reset();
@@ -161,12 +161,12 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
               Expanded(child: SizedBox()),
-              RaisedButton(
+              MaterialButton(
                 elevation: 0,
                 padding: EdgeInsets.symmetric(
                   vertical: constraint.maxHeight * 0.03,
                 ),
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).accentColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
                 onPressed: _submit,

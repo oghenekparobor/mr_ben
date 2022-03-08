@@ -85,12 +85,12 @@ class _HomeOverviewState extends State<HomeOverview> {
       if (permission == PermissionStatus.denied) {
         showDialog(
           context: context,
-          child: AlertDialog(
+          builder: (context) => AlertDialog(
             title: Text('Permission Request'),
             content: Text(
                 'Open Settings -> Permissions -> Location -> "Allow all the time". \nSo that app can function properly'),
             actions: [
-              FlatButton(
+              TextButton(
                 onPressed: () async {
                   await LocationPermissions().openAppSettings();
                   Navigator.of(context).pop();
@@ -123,7 +123,7 @@ class _HomeOverviewState extends State<HomeOverview> {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: Theme.of(context).primaryColor,
+          backgroundColor: Colors.black38,
           body: Column(
             children: [
               Expanded(
@@ -268,30 +268,12 @@ class _HomeOverviewState extends State<HomeOverview> {
                   ],
                 ),
               ),
-              SizedBox(height: 5),
-              GestureDetector(
-                onTap: () => launchSoftkodes(),
-                child: Developers(),
-              ),
+              SizedBox(height: 25),
+              // GestureDetector(
+              //   onTap: () => launchSoftkodes(),
+              //   child: Developers(),
+              // ),
             ],
-          ),
-        ),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(radius),
-          child: AnimatedContainer(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(radius),
-              color: Colors.white24,
-            ),
-            duration: Duration(milliseconds: 200),
-            transform: Matrix4.translationValues(
-              width * 0.6,
-              height * 0.15,
-              0,
-            )
-              ..scale(scaleFactor)
-              ..rotateY(isDrawerOpen ? -0.436332 : 0),
-            // ..rotateY(isDrawerOpen ? -0.15 : 0),
           ),
         ),
         GestureDetector(
@@ -299,11 +281,7 @@ class _HomeOverviewState extends State<HomeOverview> {
           child: AnimatedContainer(
             height: height,
             width: width,
-            transform: Matrix4.translationValues(
-              xOffset,
-              yOffset,
-              0,
-            )
+            transform: Matrix4.translationValues(xOffset, yOffset, 0)
               ..scale(scaleFactor)
               ..rotateY(isDrawerOpen ? -0.436332 : 0),
             duration: Duration(milliseconds: 400),
@@ -311,7 +289,7 @@ class _HomeOverviewState extends State<HomeOverview> {
               borderRadius: BorderRadius.circular(radius),
               child: Scaffold(
                 appBar: AppBar(
-                  backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+                  // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
                   elevation: 0,
                   iconTheme: Theme.of(context).iconTheme,
                   leading: isDrawerOpen
@@ -351,7 +329,7 @@ class _HomeOverviewState extends State<HomeOverview> {
                               padding: EdgeInsets.all(2),
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: Theme.of(context).primaryColor,
+                                color: Theme.of(context).accentColor,
                               ),
                               child: FittedBox(
                                 child: Text(
@@ -361,7 +339,7 @@ class _HomeOverviewState extends State<HomeOverview> {
                                 ),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -376,8 +354,8 @@ class _HomeOverviewState extends State<HomeOverview> {
                         icon: Icon(
                           Typicons.home,
                           color: _current == 0
-                              ? Theme.of(context).primaryColor
-                              : Colors.grey,
+                              ? Theme.of(context).accentColor
+                              : Colors.grey.shade50,
                         ),
                         onPressed: () {
                           setState(() {
@@ -389,7 +367,7 @@ class _HomeOverviewState extends State<HomeOverview> {
                         icon: Icon(
                           Typicons.heart,
                           color: _current == 1
-                              ? Theme.of(context).primaryColor
+                              ? Theme.of(context).accentColor
                               : Colors.grey,
                         ),
                         onPressed: auth.isAuth
@@ -405,7 +383,7 @@ class _HomeOverviewState extends State<HomeOverview> {
                         icon: Icon(
                           Typicons.user,
                           color: _current == 2
-                              ? Theme.of(context).primaryColor
+                              ? Theme.of(context).accentColor
                               : Colors.grey,
                         ),
                         onPressed: auth.isAuth
@@ -421,7 +399,7 @@ class _HomeOverviewState extends State<HomeOverview> {
                         icon: Icon(
                           Typicons.time,
                           color: _current == 3
-                              ? Theme.of(context).primaryColor
+                              ? Theme.of(context).accentColor
                               : Colors.grey,
                         ),
                         onPressed: auth.isAuth
@@ -441,43 +419,6 @@ class _HomeOverviewState extends State<HomeOverview> {
           ),
         )
       ],
-    );
-  }
-}
-
-class Developers extends StatefulWidget {
-  Developers();
-
-  @override
-  _DevelopersState createState() => _DevelopersState();
-}
-
-class _DevelopersState extends State<Developers> {
-  var softkodes = false;
-
-  void collaboration() {
-    Timer.periodic(Duration(seconds: 3), (timer) {
-      setState(() {
-        softkodes = !softkodes;
-      });
-    });
-  }
-
-  @override
-  void initState() {
-    collaboration();
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-      child: Text(
-        softkodes ? 'Designed by Softkodes' : 'Developed by Coffee.',
-        style: TextStyle(color: Colors.white60, fontSize: 15),
-      ),
     );
   }
 }

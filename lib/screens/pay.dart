@@ -1,4 +1,3 @@
-
 import 'package:Mr_Ben/providers/cart.dart';
 import 'package:Mr_Ben/screens/delivery.dart';
 import 'package:Mr_Ben/views/main_button.dart';
@@ -26,10 +25,10 @@ class _PaymentState extends State<Payment> {
     final cart = Provider.of<Cart>(context);
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+        // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
         leading: IconButton(
           icon: Icon(CupertinoIcons.back),
           onPressed: () => Navigator.of(context).pop(),
@@ -39,7 +38,7 @@ class _PaymentState extends State<Payment> {
           'Checkout',
           style: TextStyle(
             fontSize: 18,
-            color: Color.fromRGBO(0, 0, 0, 1),
+            color: Colors.white,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -50,6 +49,7 @@ class _PaymentState extends State<Payment> {
           builder: (ctx, constraint) => Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              SizedBox(height: 10),
               Text(
                 'Payment',
                 style: TextStyle(
@@ -71,7 +71,7 @@ class _PaymentState extends State<Payment> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
+                  color: Colors.black38,
                 ),
                 child: Column(
                   children: [
@@ -169,7 +169,7 @@ class _PaymentState extends State<Payment> {
               MainButton(
                 label: 'Proceed to payment',
                 padding: constraint.maxHeight * .025,
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).accentColor,
                 onpressed: () => Navigator.of(context).pushNamed(
                   Delivery.route,
                   arguments: _payment,

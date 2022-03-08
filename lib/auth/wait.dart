@@ -40,11 +40,9 @@ class _WaitScreenState extends State<WaitScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(color: Colors.white),
+          // Container(color: Colors.white),
           Align(
             child: Container(
-              width: 260,
-              height: 260,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.transparent,
@@ -55,9 +53,9 @@ class _WaitScreenState extends State<WaitScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
-                      'assets/images/logo2.png',
-                      width: 190,
-                      height: 190,
+                      'assets/images/logo-2.png',
+                      width: 150,
+                      height: 150,
                     ),
                     SizedBox(height: 5),
                     CircularProgressIndicator(

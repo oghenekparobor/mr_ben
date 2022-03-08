@@ -13,13 +13,14 @@ class FavoriteScreen extends StatelessWidget {
     var auth = Provider.of<Auth>(context, listen: false).userId;
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 15),
         child: LayoutBuilder(
           builder: (ctx, constraint) => Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 10),
               Text(
                 'My favorite\nfoods',
                 style: TextStyle(

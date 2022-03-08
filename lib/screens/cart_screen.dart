@@ -1,4 +1,3 @@
-
 import 'package:Mr_Ben/auth/get_started.dart';
 import 'package:Mr_Ben/providers/auth.dart';
 import 'package:Mr_Ben/providers/cart.dart';
@@ -25,7 +24,7 @@ class CartScreen extends StatelessWidget {
         elevation: 0,
         iconTheme: Theme.of(context).iconTheme,
       ),
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 15),
         child: LayoutBuilder(
@@ -58,6 +57,7 @@ class CartScreen extends StatelessWidget {
                                         'assets/images/swipe.png',
                                         width: 15,
                                         height: 15,
+                                        color: Colors.white,
                                       ),
                                       SizedBox(width: 5),
                                       Text(
@@ -93,7 +93,7 @@ class CartScreen extends StatelessWidget {
                           ),
                           MainButton(
                             label: 'Checkout',
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).accentColor,
                             padding: constraint.maxHeight * 0.025,
                             onpressed: cart.cartItems.isEmpty
                                 ? null

@@ -97,6 +97,7 @@ class ProductItem extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,
+                                color: Colors.black,
                               ),
                             ),
                             SizedBox(height: constraint.maxHeight * 0.03),

@@ -19,10 +19,10 @@ class _GetStartedState extends State<GetStarted> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black38,
         iconTheme: Theme.of(context).iconTheme,
       ),
       body: SingleChildScrollView(
@@ -44,7 +44,7 @@ class _GetStartedState extends State<GetStarted> {
                   width: double.infinity,
                   height: MediaQuery.of(context).size.height * .28,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.black38,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30),
                       bottomRight: Radius.circular(30),
@@ -54,10 +54,8 @@ class _GetStartedState extends State<GetStarted> {
                     children: [
                       Align(
                         child: Container(
-                          margin: EdgeInsets.symmetric(
-                            vertical: 40,
-                          ),
-                          child: Image.asset('assets/images/logo2.png'),
+                          margin: EdgeInsets.symmetric(vertical: 40),
+                          child: Image.asset('assets/images/logo-2.png'),
                         ),
                       ),
                       Align(
@@ -80,7 +78,7 @@ class _GetStartedState extends State<GetStarted> {
                                   border: Border(
                                     bottom: BorderSide(
                                       color: _current == 0
-                                          ? Theme.of(context).primaryColor
+                                          ? Theme.of(context).accentColor
                                           : Colors.transparent,
                                       width: 3,
                                     ),
@@ -91,6 +89,7 @@ class _GetStartedState extends State<GetStarted> {
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
+                                    color: Theme.of(context).accentColor,
                                   ),
                                 ),
                               ),
@@ -111,7 +110,7 @@ class _GetStartedState extends State<GetStarted> {
                                   border: Border(
                                     bottom: BorderSide(
                                       color: _current == 1
-                                          ? Theme.of(context).primaryColor
+                                          ? Theme.of(context).accentColor
                                           : Colors.transparent,
                                       width: 3,
                                     ),
@@ -122,6 +121,7 @@ class _GetStartedState extends State<GetStarted> {
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
+                                    color: Theme.of(context).accentColor,
                                   ),
                                 ),
                               ),

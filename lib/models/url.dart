@@ -1,5 +1,5 @@
 class Url {
-  static String url = 'https://soft-kode.com/charissa';
+  static String url = 'https://b-grill.com/';
 
   static String getCategory = '$url/category.php';
   static String getMeals = '$url/meals.php';

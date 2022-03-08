@@ -15,7 +15,7 @@ class MainButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return MaterialButton(
       elevation: 0,
       color: color,
       padding: EdgeInsets.symmetric(

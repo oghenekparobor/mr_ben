@@ -1,4 +1,3 @@
-
 import 'package:Mr_Ben/auth/forget.dart';
 import 'package:Mr_Ben/auth/wait.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +43,7 @@ class _SignInState extends State<SignIn> {
           builder: (context) => AlertDialog(
             content: Text('Invalid login credential, please try again'),
             actions: [
-              FlatButton(
+              TextButton(
                   onPressed: () async {
                     Navigator.of(context).pop();
                     _formKey.currentState.reset();
@@ -120,25 +119,25 @@ class _SignInState extends State<SignIn> {
               SizedBox(height: constraint.maxHeight * .05),
               Align(
                 alignment: Alignment.bottomRight,
-                child: FlatButton(
-                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                child: TextButton(
                   onPressed: () =>
                       Navigator.of(context).pushNamed(ForgetPassword.route),
                   child: Text(
                     'Forgot password ?',
                     style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.bold),
+                      color: Theme.of(context).accentColor,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
               Expanded(child: SizedBox()),
-              RaisedButton(
+              MaterialButton(
                 elevation: 0,
                 padding: EdgeInsets.symmetric(
                   vertical: constraint.maxHeight * 0.03,
                 ),
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).accentColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),

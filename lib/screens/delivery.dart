@@ -30,7 +30,7 @@ void showCustomDialog({
 }) {
   showDialog(
     context: context,
-    child: Center(
+    builder: (context) => Center(
       child: Container(
         width: double.infinity,
         height: 320,
@@ -56,7 +56,7 @@ void showCustomDialog({
                   topRight: Radius.circular(30),
                 ),
                 child: Material(
-                  color: Color.fromRGBO(237, 237, 237, 1),
+                  color: Colors.black38,
                   child: Container(
                     margin: EdgeInsets.symmetric(
                       vertical: 20,
@@ -163,14 +163,7 @@ void showCustomDialog({
               child: Row(
                 children: [
                   Expanded(
-                    child: FlatButton(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 30,
-                        vertical: 15,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
+                    child: TextButton(
                       onPressed: () => Navigator.of(context).pop(),
                       child: FittedBox(
                         child: Text(
@@ -186,9 +179,9 @@ void showCustomDialog({
                   ),
                   SizedBox(width: 5),
                   Expanded(
-                    child: RaisedButton(
+                    child: MaterialButton(
                       elevation: 0,
-                      color: Theme.of(context).primaryColor,
+                      color: Theme.of(context).accentColor,
                       padding: EdgeInsets.symmetric(
                         horizontal: 30,
                         vertical: 15,
@@ -276,7 +269,7 @@ void cardPayment(
   CheckoutResponse response = await PaystackPlugin.checkout(
     context,
     charge: charge,
-    logo: Image.asset('assets/images/logo.png', width: 50),
+    logo: Image.asset('assets/images/logo-2.png', width: 90),
     method: CheckoutMethod.card,
   );
   if (response.verify)
@@ -379,10 +372,10 @@ class _DeliveryState extends State<Delivery> {
     return calculateDistance(
           first.latitude,
           first.longitude,
-          5.5440463,
-          5.7663575,
+          5.5424501614534964,
+          5.766253739530611,
         ) *
-        cost;
+        250;
   }
 
   double calculateDistance(lat1, lon1, lat2, lon2) {
@@ -414,7 +407,7 @@ class _DeliveryState extends State<Delivery> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+        // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
         leading: IconButton(
           icon: Icon(CupertinoIcons.back),
           onPressed: () => Navigator.of(context).pop(),
@@ -423,20 +416,21 @@ class _DeliveryState extends State<Delivery> {
         title: Text(
           'Checkout',
           style: TextStyle(
-            fontSize: 18,
-            color: Color.fromRGBO(0, 0, 0, 1),
+            fontSize: 22,
+            color: Colors.white,
             fontWeight: FontWeight.w600,
           ),
         ),
       ),
       body: Container(
-        color: Color.fromRGBO(246, 246, 249, 1),
+        // color: Color.fromRGBO(246, 246, 249, 1),
         margin: EdgeInsets.symmetric(horizontal: 15),
         child: LayoutBuilder(
           builder: (ctx, constraint) => Container(
             height: constraint.maxHeight,
             child: ListView(
               children: [
+                SizedBox(height: 10),
                 Text(
                   'Delivery',
                   style: TextStyle(
@@ -455,14 +449,13 @@ class _DeliveryState extends State<Delivery> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    FlatButton(
-                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    TextButton(
                       onPressed: () =>
                           Navigator.of(context).pushNamed(ProfileEdit.route),
                       child: Text(
                         'Change',
                         style: TextStyle(
-                            color: Colors.red,
+                            color: Theme.of(context).accentColor,
                             decoration: TextDecoration.underline),
                       ),
                     ),
@@ -473,7 +466,7 @@ class _DeliveryState extends State<Delivery> {
                   width: double.infinity,
                   padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.black38,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -524,7 +517,7 @@ class _DeliveryState extends State<Delivery> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
+                    color: Colors.black38,
                   ),
                   child: Column(
                     children: [
@@ -588,7 +581,7 @@ class _DeliveryState extends State<Delivery> {
                 SizedBox(height: constraint.maxHeight * .02),
                 MainButton(
                   label: 'Complete payment',
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).accentColor,
                   padding: constraint.maxHeight * 0.025,
                   onpressed: () => _validation(
                     name: details['username'],

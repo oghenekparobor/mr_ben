@@ -30,11 +30,11 @@ class OrderView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+        // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
         elevation: 0,
         iconTheme: Theme.of(context).iconTheme,
       ),
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 0),
         child: ListView(
@@ -42,7 +42,7 @@ class OrderView extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               height: 45,
-              color: Color.fromRGBO(237, 237, 237, 1),
+              color: Colors.black38,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -52,7 +52,7 @@ class OrderView extends StatelessWidget {
                   ),
                   Text(
                     '$dat',
-                    style: TextStyle(fontSize: 13, color: Colors.black54),
+                    style: TextStyle(fontSize: 13, color: Colors.white),
                   )
                 ],
               ),
@@ -117,7 +117,7 @@ class OrderView extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.normal,
-                              color: Colors.black54,
+                              color: Colors.white,
                             ),
                           )
                         ],
@@ -149,7 +149,7 @@ class OrderView extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
-                        color: Colors.black54,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -163,7 +163,7 @@ class OrderView extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
-                        color: Colors.black54,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -188,7 +188,7 @@ class OrderView extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.normal,
-                      color: Colors.black54,
+                      color: Colors.white,
                     ),
                   )
                 ],
@@ -199,7 +199,7 @@ class OrderView extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 15),
               alignment: Alignment.centerLeft,
               height: 45,
-              color: Color.fromRGBO(237, 237, 237, 1),
+              color: Colors.black38,
               child: Text(
                 'YOUR ORDERS',
                 style: TextStyle(
@@ -252,7 +252,7 @@ class OrderView extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.normal,
-                              color: Colors.black54,
+                              color: Colors.white,
                             ),
                           ),
                         ],
@@ -261,12 +261,13 @@ class OrderView extends StatelessWidget {
                   ],
                 ),
               ),
+            SizedBox(height: 15),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-              child: RaisedButton(
+              child: MaterialButton(
                 elevation: 0,
                 padding: EdgeInsets.symmetric(vertical: 15),
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).accentColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),

@@ -15,17 +15,18 @@ class OrdersScreen extends StatelessWidget {
     final auth = Provider.of<Auth>(context).userId;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+        // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
         elevation: 0,
         iconTheme: Theme.of(context).iconTheme,
       ),
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 15),
         child: LayoutBuilder(
           builder: (ctx, constraint) => Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              SizedBox(height: 10),
               Text(
                 'My Orders',
                 style: TextStyle(

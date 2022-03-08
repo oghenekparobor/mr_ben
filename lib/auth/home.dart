@@ -39,11 +39,10 @@ class _HomeState extends State<Home> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Stack(
               children: [
-                Container(color: Colors.white),
                 Align(
                   child: Container(
-                    width: 250,
-                    height: 250,
+                    // width: 250,
+                    // height: 250,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.transparent,
@@ -54,9 +53,9 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            'assets/images/logo2.png',
-                            width: 180,
-                            height: 180,
+                            'assets/images/logo-2.png',
+                            width: 150,
+                            height: 150,
                           ),
                           SizedBox(height: 15),
                           CircularProgressIndicator(
@@ -107,7 +106,7 @@ class TryAgain extends StatelessWidget {
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w600,
-              color: Color.fromRGBO(0, 0, 0, 1),
+              color: Colors.white,
             ),
           ),
           SizedBox(height: 5),
@@ -117,7 +116,7 @@ class TryAgain extends StatelessWidget {
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.normal,
-              color: Color.fromRGBO(0, 0, 0, 1),
+              color: Colors.white,
             ),
           ),
           SizedBox(height: 25),
@@ -125,7 +124,7 @@ class TryAgain extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: MainButton(
               label: 'Try again',
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).accentColor,
               padding: 15,
               onpressed: () => Navigator.of(context).pushReplacementNamed('/'),
             ),

@@ -61,7 +61,7 @@ showFinnalDialog(BuildContext context) {
         child: Text('Your orders has been placed successfully!'),
       ),
       actions: [
-        RaisedButton(
+        MaterialButton(
           padding: const EdgeInsets.all(14),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
@@ -72,7 +72,7 @@ showFinnalDialog(BuildContext context) {
           },
           child: Text('Continue shopping'),
         ),
-        FlatButton(
+        TextButton(
           onPressed: () async {
             Navigator.of(context).pushReplacementNamed(OrdersScreen.route);
           },

@@ -63,7 +63,9 @@ class _MyAppState extends State<MyApp> {
           debugShowCheckedModeBanner: false,
           title: 'Mr Ben',
           theme: ThemeData(
-            primaryColor: Color.fromRGBO(251, 17, 28, 1),
+            brightness: Brightness.dark,
+            primarySwatch: Colors.grey,
+            primaryColor: Color.fromRGBO(55, 55, 55, 1),
             accentColor: Color.fromRGBO(251, 17, 28, 1),
             fontFamily: 'SF Pro',
             backgroundColor: Colors.white,

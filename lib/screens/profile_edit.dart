@@ -67,7 +67,7 @@ class _ProfileEditState extends State<ProfileEdit> {
         elevation: 0,
         iconTheme: Theme.of(context).iconTheme,
       ),
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 15),
         child: LayoutBuilder(
@@ -86,7 +86,7 @@ class _ProfileEditState extends State<ProfileEdit> {
                 width: double.infinity,
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.black38,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -208,12 +208,12 @@ class _ProfileEditState extends State<ProfileEdit> {
                 ),
               ),
               SizedBox(height: constraint.maxHeight * .4),
-              RaisedButton(
+              MaterialButton(
                 elevation: 0,
                 padding: EdgeInsets.symmetric(
                   vertical: constraint.maxHeight * 0.025,
                 ),
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).accentColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),

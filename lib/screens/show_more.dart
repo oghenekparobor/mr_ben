@@ -1,4 +1,3 @@
-
 import 'package:Mr_Ben/models/meal.dart';
 import 'package:Mr_Ben/providers/meals.dart';
 import 'package:Mr_Ben/views/product_item.dart';
@@ -29,10 +28,10 @@ class _ShowMoreState extends State<ShowMore> {
     loading(context, category);
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
         leading: IconButton(
           icon: Icon(CupertinoIcons.back),
           onPressed: () => Navigator.of(context).pop(),

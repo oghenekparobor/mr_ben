@@ -37,7 +37,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
           builder: (context) => AlertDialog(
             content: Text('Password recovery mail has been sent!'),
             actions: [
-              FlatButton(
+              TextButton(
                 onPressed: () async {
                   Navigator.of(context).pop();
                   _formKey.currentState.reset();
@@ -65,11 +65,11 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
         elevation: 0,
         iconTheme: Theme.of(context).iconTheme,
       ),
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
@@ -113,10 +113,10 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                           ),
                           SizedBox(height: constraint.maxHeight * .1),
                           // Expanded(child: SizedBox()),
-                          RaisedButton(
+                          MaterialButton(
                             elevation: 0,
                             padding: EdgeInsets.symmetric(vertical: 20),
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).accentColor,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
                             onPressed: _submit,

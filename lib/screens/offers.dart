@@ -8,11 +8,9 @@ class OffersAndPromo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(246, 246, 249, 1),
         elevation: 0,
         iconTheme: Theme.of(context).iconTheme,
       ),
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 15),
         child: LayoutBuilder(
@@ -42,7 +40,8 @@ class OffersAndPromo extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      'Mr Ben Barbeque doesn\'t have any offers \nyet please check again.',
+                      ' B\'s BBQ doesn\'t have any offers \nyet please check again.',
+                      textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 17),
                     ),
                   ],

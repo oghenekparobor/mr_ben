@@ -1,4 +1,3 @@
-
 import 'package:Mr_Ben/providers/auth.dart';
 import 'package:Mr_Ben/providers/cart.dart';
 import 'package:Mr_Ben/providers/meals.dart';
@@ -94,6 +93,7 @@ class _CartItemState extends State<CartItem> {
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 17,
+                        color: Colors.black,
                       ),
                     ),
                     Text(

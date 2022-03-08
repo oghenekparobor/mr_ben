@@ -13,13 +13,14 @@ class TransactionHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     final auth = Provider.of<Auth>(context).userId;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 15),
         child: LayoutBuilder(
           builder: (ctx, constraint) => Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 10),
               Text(
                 'Shopping\nhistory',
                 style: TextStyle(

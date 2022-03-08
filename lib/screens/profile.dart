@@ -25,7 +25,7 @@ class _ProfileState extends State<Profile> {
     var details = json.decode(auth.userDetail) as Map<String, dynamic>;
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 15),
         child: LayoutBuilder(
@@ -43,7 +43,7 @@ class _ProfileState extends State<Profile> {
                 width: double.infinity,
                 padding: EdgeInsets.symmetric(horizontal: 5, vertical: 15),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.black38,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -110,8 +110,9 @@ class _ProfileState extends State<Profile> {
                 width: double.infinity,
                 padding: EdgeInsets.symmetric(vertical: 10),
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20)),
+                  color: Colors.black38,
+                  borderRadius: BorderRadius.circular(20),
+                ),
                 child: Column(
                   children: [
                     ListTile(

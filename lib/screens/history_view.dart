@@ -22,11 +22,11 @@ class HistoryView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+        // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
         elevation: 0,
         iconTheme: Theme.of(context).iconTheme,
       ),
-      backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+      // backgroundColor: Color.fromRGBO(246, 246, 249, 1),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 0),
         child: ListView(
@@ -34,7 +34,7 @@ class HistoryView extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               height: 45,
-              color: Color.fromRGBO(237, 237, 237, 1),
+              color: Colors.black38,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -108,7 +108,7 @@ class HistoryView extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.normal,
-                            color: Colors.black54,
+                            color: Colors.white,
                           ),
                         )
                       ],
@@ -122,7 +122,7 @@ class HistoryView extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 15),
               alignment: Alignment.centerLeft,
               height: 45,
-              color: Color.fromRGBO(237, 237, 237, 1),
+              color: Colors.black38,
               child: Text(
                 'YOUR ORDERS',
                 style: TextStyle(
@@ -175,7 +175,7 @@ class HistoryView extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.normal,
-                              color: Colors.black54,
+                              color: Colors.white,
                             ),
                           ),
                         ],
